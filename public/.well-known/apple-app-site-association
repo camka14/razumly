@@ -1,0 +1,11 @@
+{
+    "applinks": {
+        "apps": [],
+        "details": [
+            {
+                "appID": "427LTWF4US.com.razumly.mvp",
+                "paths": [ "/mvp*" ]
+            }
+        ]
+    }
+}
