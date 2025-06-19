@@ -1,10 +1,16 @@
 {
     "applinks": {
-        "apps": [],
         "details": [
             {
-                "appID": "427LTWF4US.com.razumly.mvp",
-                "paths": [ "/mvp*" ]
+                "appIDs": [
+                    "427LTWF4US.com.razumly.mvp"
+                ],
+                "components": [
+                    {
+                        "/": "/mvp/*",
+                        "comment": "Matches all paths under /mvp/"
+                    }
+                ]
             }
         ]
     }
