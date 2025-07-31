@@ -68,15 +68,6 @@ export default function HomePage() {
               </div>
             </div>
           </div>
-
-          {/* Deep Link Examples */}
-          <div className="mb-8">
-            <h2 className="text-2xl font-semibold mb-4">Deep Link Examples</h2>
-            <div className="space-y-2 text-sm font-mono bg-gray-100 dark:bg-gray-800 p-4 rounded-lg">
-              <div>Event: <code>razumly://mvp/event/12345</code></div>
-              <div>Tournament: <code>razumly://mvp/tournament/67890</code></div>
-            </div>
-          </div>
         </div>
       </div>
     </div>
