@@ -35,6 +35,9 @@ export default function RootLayout({
               <Link href="/privacy-policy" className="text-gray-600 hover:text-gray-900">
                 Privacy Policy
               </Link>
+              <Link href="/delete-data" className="text-gray-600 hover:text-gray-900">
+                Delete Data
+              </Link>
             </div>
           </nav>
         </header>

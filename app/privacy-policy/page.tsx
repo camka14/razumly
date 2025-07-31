@@ -109,8 +109,7 @@ export default function PrivacyPolicyPage() {
                 If you have any questions about this Privacy Policy or our data practices, please contact us at:
               </p>
               <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-lg">
-                <p><strong>Email:</strong> privacy@razumly.com</p>
-                <p><strong>Address:</strong> [Your Company Address]</p>
+                <p><strong>Email:</strong> support@razumly.com</p>
               </div>
             </section>
           </div>
