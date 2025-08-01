@@ -40,7 +40,7 @@ export default function DataDeletionPage() {
               </p>
               <ul className="list-disc list-inside space-y-2 ml-4">
                 <li>Your full name</li>
-                <li>The email address associated with your Razumly account</li>
+                <li>The email address associated with your MVP account</li>
                 <li>Subject line: &ldquo;Data Deletion Request&rdquo;</li>
                 <li>A clear statement that you want your data deleted</li>
               </ul>
