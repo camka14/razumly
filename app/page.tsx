@@ -24,7 +24,7 @@ export default function HomePage() {
                 className="inline-block"
               >
                 <Image
-                  src="https://www.figma.com/design/viUebr0LnDLtVOglgc2AZO/Playstore---Appstore-Buttons--Community-?node-id=303-2352&t=9slcw9ZWS6RsgJkL-4"
+                  src="googlePlay.svg"
                   alt="Get it on Google Play"
                   width={200}
                   height={64}
@@ -39,7 +39,7 @@ export default function HomePage() {
                 className="inline-block"
               >
                 <Image
-                  src="https://www.figma.com/design/viUebr0LnDLtVOglgc2AZO/Playstore---Appstore-Buttons--Community-?node-id=303-2106&t=9slcw9ZWS6RsgJkL-4"
+                  src="playStore.svg"
                   alt="Download on the App Store"
                   width={200}
                   height={64}
