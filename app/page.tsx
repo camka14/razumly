@@ -24,7 +24,7 @@ export default function HomePage() {
                 className="inline-block"
               >
                 <Image
-                  src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
+                  src="https://images.squarespace-cdn.com/content/5c213a383c3a53bf091b1c36/74658c71-a6e5-494f-adcf-cda0d8173527/button-android-us.png?content-type=image%2Fpng"
                   alt="Get it on Google Play"
                   width={200}
                   height={64}
@@ -39,7 +39,7 @@ export default function HomePage() {
                 className="inline-block"
               >
                 <Image
-                  src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
+                  src="https://images.squarespace-cdn.com/content/5c213a383c3a53bf091b1c36/965d1907-eab9-4bf9-a19b-a55dab2872c5/button-apple-us.png?content-type=image%2Fpng"
                   alt="Download on the App Store"
                   width={200}
                   height={64}
@@ -48,6 +48,7 @@ export default function HomePage() {
                 />
               </a>
             </div>
+            
           </div>
 
           {/* Features Section */}
