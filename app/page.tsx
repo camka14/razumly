@@ -39,7 +39,7 @@ export default function HomePage() {
                 className="inline-block"
               >
                 <Image
-                  src="playStore.svg"
+                  src="appStore.svg"
                   alt="Download on the App Store"
                   width={200}
                   height={64}
