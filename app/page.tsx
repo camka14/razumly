@@ -24,7 +24,7 @@ export default function HomePage() {
                 className="inline-block"
               >
                 <Image
-                  src="https://images.squarespace-cdn.com/content/5c213a383c3a53bf091b1c36/74658c71-a6e5-494f-adcf-cda0d8173527/button-android-us.png?content-type=image%2Fpng"
+                  src="https://www.figma.com/design/viUebr0LnDLtVOglgc2AZO/Playstore---Appstore-Buttons--Community-?node-id=303-2352&t=9slcw9ZWS6RsgJkL-4"
                   alt="Get it on Google Play"
                   width={200}
                   height={64}
@@ -39,7 +39,7 @@ export default function HomePage() {
                 className="inline-block"
               >
                 <Image
-                  src="https://images.squarespace-cdn.com/content/5c213a383c3a53bf091b1c36/965d1907-eab9-4bf9-a19b-a55dab2872c5/button-apple-us.png?content-type=image%2Fpng"
+                  src="https://www.figma.com/design/viUebr0LnDLtVOglgc2AZO/Playstore---Appstore-Buttons--Community-?node-id=303-2106&t=9slcw9ZWS6RsgJkL-4"
                   alt="Download on the App Store"
                   width={200}
                   height={64}
