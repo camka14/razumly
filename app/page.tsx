@@ -1,76 +1,21 @@
-import Image from 'next/image';
+import Image from "next/image";
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen bg-background text-foreground">
-      <div className="container mx-auto px-4 py-8">
-        <div className="max-w-4xl mx-auto text-center">
-          {/* Header */}
-          <h1 className="text-4xl md:text-6xl font-bold mb-4">
-            Razumly MVP
-          </h1>
-          <p className="text-xl md:text-2xl text-gray-600 mb-8">
-            Join and organize sports events with ease
-          </p>
-          
-          {/* App Download Section */}
-          <div className="mb-12">
-            <h2 className="text-2xl font-semibold mb-6">Download Our App</h2>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <a
-                href="https://play.google.com/store/apps/details?id=com.razumly.mvp"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block"
-              >
-                <Image
-                  src="googlePlay.svg"
-                  alt="Get it on Google Play"
-                  width={200}
-                  height={64}
-                  className="h-16 w-auto"
-                  priority
-                />
-              </a>
-              <a
-                href="https://apps.apple.com/app/razumly-mvp/id123456789"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block"
-              >
-                <Image
-                  src="appStore.svg"
-                  alt="Download on the App Store"
-                  width={200}
-                  height={64}
-                  className="h-16 w-auto"
-                  priority
-                />
-              </a>
-            </div>
-            
-          </div>
-
-          {/* Features Section */}
-          <div className="mb-12">
-            <h2 className="text-2xl font-semibold mb-6">Features</h2>
-            <div className="grid md:grid-cols-3 gap-6">
-              <div className="p-6 border rounded-lg">
-                <h3 className="text-lg font-semibold mb-2">Join Events</h3>
-                <p className="text-gray-600">Find and participate in sports events near you</p>
-              </div>
-              <div className="p-6 border rounded-lg">
-                <h3 className="text-lg font-semibold mb-2">Organize Events</h3>
-                <p className="text-gray-600">Create and manage your own sports events</p>
-              </div>
-              <div className="p-6 border rounded-lg">
-                <h3 className="text-lg font-semibold mb-2">Tournament Management</h3>
-                <p className="text-gray-600">Run tournaments with ease</p>
-              </div>
-            </div>
-          </div>
-        </div>
+    <main className="grid min-h-screen place-items-center bg-neutral-950 px-6 text-white">
+      <div className="flex max-w-xl flex-col items-center text-center">
+        <Image
+          alt="Construction crane"
+          className="mb-8 h-32 w-auto sm:h-40"
+          height={633}
+          src="/crane.svg"
+          width={538}
+          priority
+        />
+        <h1 className="text-3xl font-semibold tracking-tight sm:text-5xl">
+          Sorry, this site is currently under construction.
+        </h1>
       </div>
-    </div>
+    </main>
   );
 }
