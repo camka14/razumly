@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function HomePage() {
   return (
@@ -15,6 +16,11 @@ export default function HomePage() {
         <h1 className="text-3xl font-semibold tracking-tight sm:text-5xl">
           Sorry, this site is currently under construction.
         </h1>
+        <p className="mt-8 text-base text-neutral-300">
+          <Link className="rounded underline underline-offset-4 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white" href="/classy">
+            Classy for Jira: documentation and support
+          </Link>
+        </p>
       </div>
     </main>
   );

@@ -20,6 +20,15 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
+## Classy documentation
+
+`/classy`, `/classy/docs`, `/classy/data` and `/classy/support` contain Classy-specific product documentation and support. `/privacy-policy` and `/delete-data` continue to describe the separate sports app.
+
+`app/classy/_legal/ReviewMaterial.tsx` is non-routable review material, not an approved privacy policy or executed agreement. Do not expose privacy/terms/DPA routes until the actual Provider details and wording are approved.
+
+The publication preparation updates Next within 15.x to `15.5.27` and overrides PostCSS with compatible `8.5.28`, resolving the observed production dependency advisories. Verify with `npm audit --package-lock-only --omit=dev`, `npm run build`, and a real browser check of Classy navigation, keyboard skip links, mobile layout and the unchanged sports-policy routes. The production audit and these build/browser checks passed on 2026-10-05; no broader security certification is claimed.
+
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:

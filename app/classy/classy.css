@@ -1,0 +1,258 @@
+.classy-site {
+  --classy-bg: #fafafa;
+  --classy-surface: #ffffff;
+  --classy-text: #171717;
+  --classy-muted: #525252;
+  --classy-border: #d4d4d4;
+  --classy-link: #1d4ed8;
+  min-height: 100vh;
+  background: var(--classy-bg);
+  color: var(--classy-text);
+  font-size: 1rem;
+  line-height: 1.7;
+  overflow-wrap: anywhere;
+}
+
+@media (prefers-color-scheme: dark) {
+  .classy-site {
+    --classy-bg: #0a0a0a;
+    --classy-surface: #171717;
+    --classy-text: #f5f5f5;
+    --classy-muted: #a3a3a3;
+    --classy-border: #404040;
+    --classy-link: #93c5fd;
+  }
+}
+
+.classy-site a {
+  color: var(--classy-link);
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+.classy-site a:hover {
+  text-decoration-thickness: 2px;
+}
+
+.classy-site :focus-visible {
+  outline: 3px solid var(--classy-link);
+  outline-offset: 4px;
+}
+
+.classy-site .classy-skip-link {
+  position: absolute;
+  top: 0.75rem;
+  left: 1rem;
+  z-index: 1;
+  padding: 0.75rem 1rem;
+  background: var(--classy-surface);
+  border: 1px solid var(--classy-border);
+  transform: translateY(-200%);
+}
+
+.classy-site .classy-skip-link:focus {
+  transform: translateY(0);
+}
+
+.classy-header {
+  border-bottom: 1px solid var(--classy-border);
+  background: var(--classy-surface);
+}
+
+.classy-header-inner {
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem 2rem;
+}
+
+.classy-site .classy-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--classy-text);
+  font-size: 1.25rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.classy-brand img {
+  flex: 0 0 auto;
+}
+
+.classy-brand-detail {
+  display: block;
+  color: var(--classy-muted);
+  font-size: 0.875rem;
+  font-weight: 400;
+}
+
+.classy-nav,
+.classy-footer nav,
+.classy-contents ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 1rem;
+}
+
+.classy-nav a,
+.classy-footer nav a,
+.classy-contents a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0.25rem 0;
+}
+
+.classy-main {
+  max-width: 52rem;
+  margin: 0 auto;
+  padding: 3rem 1.5rem 4rem;
+}
+
+.classy-document h1 {
+  margin: 0 0 1rem;
+  font-size: clamp(2rem, 5vw, 2.75rem);
+  font-weight: 650;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+}
+
+.classy-document h2 {
+  margin: 0 0 1rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.classy-document h3 {
+  margin: 1.5rem 0 0.75rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.classy-document p {
+  margin: 0 0 1rem;
+}
+
+.classy-intro {
+  color: var(--classy-muted);
+  font-size: 1.125rem;
+}
+
+.classy-document section {
+  margin-top: 2.5rem;
+  scroll-margin-top: 1.5rem;
+}
+
+.classy-document ul,
+.classy-document ol {
+  margin: 1rem 0;
+  padding-left: 1.5rem;
+}
+
+.classy-document ul {
+  list-style: disc;
+}
+
+.classy-document ol {
+  list-style: decimal;
+}
+
+.classy-document li + li {
+  margin-top: 0.75rem;
+}
+
+.classy-document .classy-contents {
+  margin-top: 1.75rem;
+  padding: 1rem 1.25rem;
+  border: 1px solid var(--classy-border);
+  border-radius: 0.5rem;
+  background: var(--classy-surface);
+}
+
+.classy-contents h2 {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+.classy-document .classy-contents ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.classy-document .classy-contents li + li {
+  margin-top: 0;
+}
+
+.classy-callout {
+  margin: 1.5rem 0;
+  padding: 1.25rem;
+  border: 1px solid var(--classy-border);
+  border-left: 4px solid var(--classy-link);
+  border-radius: 0.25rem;
+  background: var(--classy-surface);
+}
+
+.classy-callout p:last-child,
+.classy-footer p {
+  margin-bottom: 0;
+}
+
+.classy-document code {
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 0.9em;
+  overflow-wrap: anywhere;
+}
+
+.classy-document dl {
+  margin: 1rem 0;
+}
+
+.classy-document dl > div {
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--classy-border);
+}
+
+.classy-document dt {
+  font-weight: 600;
+}
+
+.classy-document dd {
+  margin: 0.25rem 0 0;
+}
+
+.classy-footer {
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: 1.5rem;
+  border-top: 1px solid var(--classy-border);
+  color: var(--classy-muted);
+  font-size: 0.875rem;
+}
+
+.classy-footer nav {
+  margin-top: 0.5rem;
+}
+
+@media (min-width: 640px) {
+  .classy-main {
+    padding-top: 4rem;
+  }
+
+  .classy-document dl > div {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+    gap: 1.5rem;
+  }
+
+  .classy-document dd {
+    margin-top: 0;
+  }
+}
