@@ -99,7 +99,7 @@ export default function DataHandling() {
         <p>These are suppliers&apos; own documents, not a Classy DPA, legal approval, certification or a per-request location guarantee:</p>
         <ul>
           <li><a href="https://openrouter.ai/docs/api/api-reference/alphadecisions/submit-a-decisions-request">OpenRouter Decisions API</a>, <a href="https://openrouter.ai/docs/features/zdr">ZDR routing</a> and <a href="https://openrouter.ai/docs/guides/features/input-output-logging">input/output logging</a>.</li>
-          <li><a href="https://openrouter.ai/assets/data-processing-agreement.pdf">OpenRouter DPA</a> and <a href="https://trust.openrouter.ai/">OpenRouter trust center and subprocessors</a>.</li>
+          <li><a href="https://openrouter.ai/data-processing-agreement">OpenRouter DPA</a> and <a href="https://trust.openrouter.ai/">OpenRouter trust center and subprocessors</a>.</li>
           <li><a href="https://typesafe.ai/legal/privacy-policy">TypeSafe privacy policy</a>, <a href="https://typesafe.ai/legal/data-processing">TypeSafe DPA</a> and <a href="https://trust.typesafe.ai/subprocessors">TypeSafe subprocessors</a>.</li>
         </ul>
       </section>
