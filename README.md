@@ -26,6 +26,8 @@ This project uses [`next/font`](https://nextjs.org/docs/app/building-your-applic
 
 `app/classy/_legal/ReviewMaterial.tsx` is non-routable review material, not an approved privacy policy or executed agreement. Do not expose privacy/terms/DPA routes until the actual Provider details and wording are approved.
 
+The private review now includes proposed privacy-notice wording, copyable Provider-Specific Terms fields and source-supported service-provider functions/locations. These are for owner approval, not effective public terms. The selected DPA's applicable transfer details, downstream processor coverage and notice handling remain unresolved; supplier outreach stays deferred. The existing sports-app policies and all public Classy routes are unchanged.
+
 The publication preparation updates Next within 15.x to `15.5.27` and overrides PostCSS with compatible `8.5.28`, resolving the observed production dependency advisories. Verify with `npm audit --package-lock-only --omit=dev`, `npm run build`, and a real browser check of Classy navigation, keyboard skip links, mobile layout and the unchanged sports-policy routes. The production audit and these build/browser checks passed on 2026-10-05; no broader security certification is claimed.
 
 
