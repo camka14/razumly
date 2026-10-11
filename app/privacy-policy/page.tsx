@@ -9,7 +9,7 @@ export default function PrivacyPolicyPage() {
       <div className="container mx-auto px-4 py-8">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-4xl font-bold mb-8">Privacy Policy</h1>
-          <p className="text-gray-600 mb-8">Last updated: {new Date().toLocaleDateString()}</p>
+          <p className="text-gray-600 mb-8">Last updated: 10/5/2026</p>
 
           <div className="prose prose-lg max-w-none space-y-6">
             <section>

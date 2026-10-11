@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Document from "../_components/Document";
 import DataHandling, { dataSections } from "../_components/DataHandling";
 
@@ -14,7 +15,7 @@ export default function DataPage() {
       sections={dataSections}
     >
       <div className="classy-callout">
-        <p><strong>Policy approval is pending.</strong> This product explanation is not an approved Classy privacy policy, customer agreement or DPA. Those legal documents are held for owner approval before publication. The separate Razumly sports-app policies do not apply to Classy.</p>
+        <p>Read the <Link href="/classy/privacy">Classy privacy notice</Link>. This product explanation is not a customer agreement or DPA. The separate Razumly sports-app policies do not apply to Classy.</p>
       </div>
       <DataHandling />
     </Document>

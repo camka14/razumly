@@ -1,13 +1,12 @@
 import Document from "../_components/Document";
-import DataHandling from "../_components/DataHandling";
 
 // Private App Router directory: no page route imports this material.
-// Legal publication requires complete owner-approved terms and processing details.
+// Terms and DPA publication still require complete owner-approved details.
 export default function ClassyLegalReviewMaterial() {
   return (
     <Document
       title="Classy legal publication review"
-      intro="Proposed privacy wording, provider-specific terms and processing details for owner review. This material is unpublished, does not create an agreement and does not authorize Marketplace submission."
+      intro="Provider-specific terms and processing details for owner review. This review is unpublished, does not create an agreement and does not authorize Marketplace submission."
       sections={[
         { id: "standard-terms", label: "Standard terms" },
         { id: "provider-terms", label: "Provider-specific details" },
@@ -16,11 +15,11 @@ export default function ClassyLegalReviewMaterial() {
         { id: "processing-details", label: "Classy processing details" },
         { id: "supplier-terms", label: "Supplier terms checked" },
         { id: "approval-inputs", label: "Remaining publication checks" },
-        { id: "privacy-material", label: "Proposed privacy notice" },
+        { id: "privacy-material", label: "Approved privacy notice" },
       ]}
     >
       <div className="classy-callout">
-        <p><strong>Publication hold:</strong> this component is intentionally in the non-routable <code>_legal</code> directory. It is not linked from public pages and is not imported by a public route. No legal policy, executed DPA or final provider-specific terms are represented as available.</p>
+        <p><strong>Publication hold:</strong> this component is intentionally in the non-routable <code>_legal</code> directory. It is not linked from public pages and is not imported by a public route. No executed DPA or final provider-specific terms are represented as available.</p>
         <p><strong>Owner decisions, 6 October 2026:</strong> the proposed legal approach is approved, <a href="mailto:support@razumly.com">support@razumly.com</a> receives all notices, including legal and privacy notices, and OpenRouter is used under its standard terms. No negotiated supplier agreement is assumed. Production deployment and Marketplace submission remain separate approvals.</p>
         <p><strong>Outreach deferred, 6 October 2026:</strong> the owner is evaluating how well Classy works and whether people want to use it. Do not contact OpenRouter or request a notice subscription unless the owner reopens that work. Processing-role wording stays unchanged; supplier coverage remains unconfirmed.</p>
       </div>
@@ -117,37 +116,15 @@ export default function ClassyLegalReviewMaterial() {
           <li><strong>Service-provider inventory:</strong> the factual functions and source-supported location statements are now supplied above. They do not require guessing every request&apos;s country or claiming all vendors on a supplier&apos;s general inventory process Classy content. Final contractual subprocessor/transfer coverage remains a distinct unresolved point.</li>
           <li><strong>Notice handling:</strong> the selected DPA requires 30-day new-subprocessor notice and 48-hour incident notice after Razumly becomes aware (§§4.3/5.2). OpenRouter §5.2 provides 30-day notices only when subscribed, excludes AI model providers, and §7 uses 72 hours after OpenRouter&apos;s awareness. TypeSafe §§3.2/5.2 provide reasonable advance notice, a 15-day objection window and 72 hours after its awareness. The incident clocks start at different parties&apos; awareness; the numbers alone are not a contradiction. The subscription and route-change notice process remain unverified; no subscription request will be made during the owner&apos;s outreach deferral. No alternative legal terms are adopted here.</li>
           <li><strong>Security and data access/deletion details:</strong> document applicable organizational measures and responsible handling of the selected standard&apos;s data-subject requests, return/access, deletion certificate and audit obligations (§§5–9). General approval cannot establish an unimplemented capability. Do not copy supplier certifications as Classy certifications or promise full export/backup destruction based on a History view or storage receipt.</li>
-          <li><strong>Privacy wording and support handling:</strong> review the proposed notice below, including the distinction between customer-controlled app content and direct support correspondence, applicable rights and legal bases, qualitative support-record retention and external-AI authorization. These are proposed policy statements for approval, not proof of an existing organizational practice. The owner-reported OpenRouter logging/data-use settings remain accepted without another confirmation request.</li>
+          <li><strong>Privacy wording and support handling:</strong> the owner approved publication of the proposed Classy privacy notice on 11 October 2026, including its support-handling and legal-basis statements and accompanying technical sections. This approval does not resolve supplier DPA coverage or authorize Forge production deployment, distribution changes or Marketplace submission. The owner-reported OpenRouter logging/data-use settings remain accepted without another confirmation request.</li>
         </ol>
-        <p>No extra SLA, corporate certification, regional processing promise, alternate jurisdiction, custom retention period or new compliance framework is proposed. Once actual required details and the content are approved, the publication owner can create approved privacy/terms/DPA routes and add their links. Until then, no public legal route or dead policy link exists.</p>
+        <p>No extra SLA, corporate certification, regional processing promise, alternate jurisdiction, custom retention period or new compliance framework is proposed. Privacy-notice publication is approved separately; terms/DPA routes remain held until their actual required details and content are approved.</p>
       </section>
 
       <section id="privacy-material">
-        <h2>Proposed Classy privacy notice</h2>
-        <div className="classy-callout">
-          <p><strong>Review only:</strong> the wording below is not published or effective. Its support-handling and legal-basis statements require owner approval, and its transfer-related disclosures do not resolve the supplier-contract question above. The technical sections that follow form part of this proposed notice; they are reused from the existing data explanation rather than replaced by a different retention policy.</p>
-        </div>
-        <h3>Scope and contact</h3>
-        <p>This notice covers personal information processed for Classy and communications sent to Razumly about Classy. It does not cover the separate Razumly sports app or replace Atlassian&apos;s own privacy terms. Contact Razumly at <a href="mailto:support@razumly.com">support@razumly.com</a>, or 2130 N Q St, Washougal, WA 98671, United States.</p>
-        <h3>Customer content and responsibilities</h3>
-        <p>Your organization decides which Jira or supplied text and classifier definitions to use with Classy. Razumly processes that customer-controlled information to provide the requested classification, configuration, publication, history and deletion functions. Your organization is responsible for its instructions, permissions, lawful basis and notices to people whose information it submits; it may itself act for another controller.</p>
-        <p>Classy uses external AI processing, as described below. Only submit information you are authorized to process with Atlassian, OpenRouter and TypeSafe. Do not submit secrets or sensitive information prohibited by the applicable agreement. Jira access permission or enabling an Automation action does not itself establish every person&apos;s consent or another legal basis. Classy does not automatically discover or redact personal information in free text.</p>
-        <h3>Information and purposes</h3>
-        <p>The sections below describe the source text, classifier definitions, account and lifecycle records, decision previews, publication records and linkable technical metadata used by Classy. This information supports the requested app functions, permission and replay controls, operational diagnostics, retention and account-privacy reporting. Publishing a classifier makes its selected definition available across the Jira site; it does not make private manual history site-wide.</p>
-        <p>If you contact support, your sender/contact information, message and any diagnostic details you choose to provide are used to handle the inquiry and related service, security or legal requirements. Do not email source content, passwords or API keys. Support correspondence is separate from seven-day manual History and is retained as needed to handle the inquiry and applicable recordkeeping or legal requirements; contact the notice address to request access, correction or deletion.</p>
-        <h3>Roles and legal bases</h3>
-        <p>For customer-controlled app information, Razumly acts on the customer&apos;s instructions and the customer determines the applicable lawful basis. For direct support correspondence and Razumly&apos;s own service-administration records, Razumly determines the handling needed for those purposes. Where a legal basis is required for that handling, the applicable basis is performance of a contract or requested pre-contract steps, legitimate interests in providing and securing the service and handling inquiries, or compliance with legal obligations, depending on the context. If particular processing relies on consent, it may be withdrawn for future processing without changing the lawfulness of earlier processing.</p>
-        <h3>Recipients and international processing</h3>
-        <p>Atlassian provides the Forge platform and Jira integration. OpenRouter routes inference requests to TypeSafe Jev and receives the invocation/session reference. The external-processing and supplier-information sections below identify the information sent and link to the suppliers&apos; own documents. Customer-configured Jira Automation can also copy decisions to destinations chosen by the customer; those downstream uses are controlled by the customer&apos;s rule.</p>
-        <p>Information may be processed outside your country. Forge persistent storage follows the host Atlassian app&apos;s storage location; external inference uses OpenRouter&apos;s global endpoint. Supplier-published U.S. hosting descriptions do not establish a fixed country for every request or an app-wide regional-residency guarantee. This notice does not itself create a transfer mechanism or represent unresolved contractual safeguards as approved.</p>
-        <h3>Retention, security and requests</h3>
-        <p>The technical sections below distinguish seven-day manual-result visibility, daily cleanup, continuing draft/publication storage and separate Jira, supplier, diagnostic and platform-recovery copies. Uninstalling, clearing History and whole-owner erasure have different effects. None is a guarantee of immediate deletion of every external or backup copy.</p>
-        <p>Classy uses installation/owner-scoped storage, current-user Jira access, administrator authorization for manual owner erasure and server-side provider credentials. Explicit execution diagnostics omit raw source content and credentials but can contain linkable references. These measures do not promise absolute security, supplier compliance or a certification.</p>
-        <p>Depending on applicable law and the processing context, you may request access or a copy, correction, deletion, restriction or portability, object to processing, withdraw applicable consent or complain to a competent data-protection authority. Requests about customer-controlled content should ordinarily go to the organization controlling that content; Razumly can assist with Classy records within the applicable instructions and law. Contact <a href="mailto:support@razumly.com">support@razumly.com</a> and identify the affected Jira site/account without sending sensitive content or credentials. Identity and authority may need verification. Classy does not provide a complete self-service export through its limited History view.</p>
-        <h3>Changes</h3>
-        <p>Changes to this notice will be published with the notice. Any additional notice required by an applicable agreement or law remains separate; this statement does not replace the selected DPA&apos;s notice obligations.</p>
+        <h2>Approved Classy privacy notice</h2>
+        <p>The owner-approved notice and its technical data-handling sections are maintained together at the <a href="https://www.razumly.com/classy/privacy">Classy privacy notice</a>. This review no longer duplicates the approved policy text. Supplier-contract questions and the unapproved customer terms/DPA remain separate.</p>
       </section>
-      <DataHandling />
     </Document>
   );
 }

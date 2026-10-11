@@ -21,13 +21,14 @@ export default function ClassyPage() {
         <ul>
           <li><Link href="/classy/docs">Documentation</Link> — setup, publishing, both native actions, review-safe routing, history and reduced access.</li>
           <li><Link href="/classy/data">Data &amp; deletion</Link> — what is sent and stored, retention, deletion procedures and limits.</li>
+          <li><Link href="/classy/privacy">Privacy notice</Link></li>
           <li><Link href="/classy/support">Support</Link> — contact details and safe troubleshooting information.</li>
         </ul>
       </section>
       <section>
         <h2>Availability</h2>
         <p>Classy&apos;s paid Marketplace listing and final billing settings have not been submitted. These pages provide product documentation, not an offer to purchase or a claim that a public paid release is available.</p>
-        <p>Customer legal terms and a Classy privacy policy are being prepared for owner approval. No unapproved agreement or DPA is offered on these pages.</p>
+        <p>Customer legal terms are being prepared for owner approval. No unapproved agreement or DPA is offered on these pages.</p>
       </section>
     </Document>
   );

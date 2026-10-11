@@ -41,6 +41,7 @@ export default function ClassyLayout({
         <p>Classy is a Jira app by Razumly. These pages cover Classy, not the Razumly sports app.</p>
         <nav aria-label="Classy footer">
           <Link href="/">Razumly home</Link>
+          <Link href="/classy/privacy">Privacy notice</Link>
           <a href="mailto:support@razumly.com">support@razumly.com</a>
         </nav>
       </footer>
