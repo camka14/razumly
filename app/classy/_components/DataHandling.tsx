@@ -3,6 +3,7 @@ import Link from "next/link";
 export const dataSections = [
   { id: "processing", label: "External processing" },
   { id: "stored-data", label: "Stored data" },
+  { id: "export", label: "Export data" },
   { id: "retention", label: "Retention" },
   { id: "deletion", label: "Delete data" },
   { id: "boundaries", label: "Erasure limits" },
@@ -24,7 +25,7 @@ export default function DataHandling() {
         <p>The provider request does not separately send the Jira issue key, classifier name or confidence threshold. Any of those details may nevertheless appear in free text; Classy does not automatically redact personal information from your content.</p>
         <p>Every request requires <strong>no-data-collection and zero-data-retention routing</strong>. If the route cannot meet these filters, Classy does not weaken them, switch models or create a fallback decision. These are routing requirements, not a guarantee of supplier behavior or destruction of all copies.</p>
         <p>OpenRouter account input/output logging and data-use settings are separate from request routing. Supplier operational metadata, permitted transient processing, security/abuse handling and legal-retention exceptions can remain. Disabling a setting does not erase previously retained data. Classy makes no app-wide regional-residency or Atlassian-only processing claim.</p>
-        <p>Only submit content you are authorized to process with these external services. Do not submit secrets or sensitive information, or use classification for decisions requiring guaranteed accuracy. Classy does not automatically redact your content.</p>
+        <p>Only submit content you are authorized to process with these external services. Do not submit secrets or sensitive information, or use classification for decisions requiring guaranteed accuracy. Classy does not automatically redact your content. See the <Link href="/classy/dpa/v1#customer-terms">agreement&apos;s input restrictions</Link>.</p>
       </section>
 
       <section id="stored-data">
@@ -39,7 +40,21 @@ export default function DataHandling() {
           <div><dt>Retention and inference state</dt><dd>Cleanup progress/checkpoints and installation-wide concurrency/rate/shutoff state. Logical expiry of a reservation or timestamp is not immediate destruction of every old field.</dd></div>
           <div><dt>Execution diagnostics</dt><dd>Invocation, installation and result references; stage/outcome/error class; timing; model; provider generation, usage and reported cost. Explicit execution records omit raw source, definitions, credentials and raw provider/error bodies, but their identifiers may remain linkable to an owner.</dd></div>
         </dl>
+        <p>Ordinary workspace access is owner-scoped. Jira administrators have a separate installation-wide export that includes other owners&apos; private stored records. Publishing is not required for that administrator access.</p>
         <p>Account scopes and several fingerprints use SHA-256. Hashing supports linkage and equality checks; it is not an anonymity guarantee. Jira access is rechecked before successful issue results/outputs and when reading Jira-backed history.</p>
+      </section>
+
+      <section id="export">
+        <h2>Administrator-assisted data export</h2>
+        <p>A current Jira administrator can export all owners&apos; app-addressable Classy records within that administrator&apos;s installation. This includes private drafts, publications and indexes, retained results and execution receipts, owner/lifecycle records, and retention/inference state. It includes legacy and indexed records, not just the 50-row, seven-day or current Jira-permission view in History.</p>
+        <ol>
+          <li>Open <strong>Jira settings → Apps → Classy administration → Classy data export</strong> for the correct site and installation.</li>
+          <li>Confirm <strong>Include all owners&apos; private Classy data in this installation</strong>, then choose <strong>Prepare export</strong>.</li>
+          <li>Wait for <strong>Download JSON</strong>. The versioned file identifies the installation, UTC read interval and stored records. A failed or canceled export offers no partial file; start a new export if needed.</li>
+          <li>Protect the file and verify the recipient and requested scope before sharing it. An installation-wide file can contain other people&apos;s data; do not send it to an individual requester or ordinary support email without an agreed, authorized handling process.</li>
+        </ol>
+        <p>Export is read-only, makes no AI-provider request and is not blocked by Classy&apos;s inference license check. It is a live, eventually consistent read, not an atomic backup: concurrent changes, retention or erasure can affect its contents. Use a quiet period and repeat if records change.</p>
+        <p>It does not export credentials, original Jira sources/rules/audits, diagnostic logs, provider copies, platform queue contents or recovery/backups. Downloaded copies are outside Classy&apos;s retention and erasure controls. Complete any required return before erasure or uninstall.</p>
       </section>
 
       <section id="retention">

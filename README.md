@@ -22,13 +22,17 @@ This project uses [`next/font`](https://nextjs.org/docs/app/building-your-applic
 
 ## Classy documentation
 
-`/classy`, `/classy/docs`, `/classy/data` and `/classy/support` contain Classy-specific product documentation and support. `/classy/privacy` contains the Classy privacy notice approved for publication by the owner on 2026-10-11, including the shared technical data-handling sections. `/privacy-policy` and `/delete-data` continue to describe the separate sports app.
+`/classy`, `/classy/docs`, `/classy/data` and `/classy/support` contain Classy-specific product documentation and support. `/classy/privacy` contains the Classy privacy notice, including the shared technical data-handling sections. `/classy/dpa/v1` contains Version 1.0 of the Classy Customer Agreement, including its Customer Terms and DPA Details. `/privacy-policy` and `/delete-data` continue to describe the separate sports app.
 
-`app/classy/privacy/page.tsx` is the approved privacy-notice source. It reuses `DataHandling` rather than maintaining a second retention/deletion policy. The original private `legal-review.html` in the Classy repository is retained as the approval snapshot; the public route is the current notice.
+The owner approved publication of the agreement and matching Classy privacy, export-documentation and support updates on 20 October 2026. `app/classy/privacy/page.tsx` reuses `DataHandling` rather than maintaining a second retention/deletion policy. The documented administrator-assisted export includes other owners' stored private Classy records and requires current Jira-administrator authorization.
 
-`app/classy/_legal/ReviewMaterial.tsx` remains non-routable terms/DPA review material, not an executed agreement. It links to the approved privacy notice without duplicating its text. The selected DPA's applicable transfer details, downstream processor coverage and notice handling remain unresolved; supplier outreach stays deferred. Privacy publication does not approve those matters, Forge production/distribution changes or Marketplace submission.
+The public agreement incorporates the unchanged Bonterms Standard End User Agreement v1.0 and Bonterms DPA v2.0 Attachment Version, including Exhibits A/B and the service-specific Details. Its 30-day subprocessor-notice promise is unchanged. Publication is not customer acceptance or proof of supplier safeguards; the Details require actual customer information before affected processing. The historical `_legal/ReviewMaterial.tsx` remains non-routable and is not the public agreement.
+
+This website release does not submit or release the Marketplace app or change its pricing. Verify the public document, navigation, desktop/mobile layout, support commitments and unchanged sports-policy routes after deployment.
 
 The sports privacy policy retains its already-published `10/5/2026` revision date instead of advancing it on every website build. Change that date only when that policy is actually revised; Classy publication leaves its wording and the sports deletion page unchanged.
+
+The 20 October publication also updates the existing `source-map-js` dependency from 1.2.1 to 1.2.2 for [GHSA-68fv-2mgg-jv7q](https://github.com/advisories/GHSA-68fv-2mgg-jv7q). The production dependency audit reports zero vulnerabilities after that patch; the production build, included lint/types, approved agreement text, desktop/mobile document layout and unchanged sports-policy checks pass.
 
 The publication preparation updates Next within 15.x to `15.5.27` and overrides PostCSS with compatible `8.5.28`, resolving the observed production dependency advisories. Verify with `npm audit --package-lock-only --omit=dev`, `npm run build`, and a real browser check of Classy navigation, keyboard skip links, mobile layout and the unchanged sports-policy routes. The production audit and these build/browser checks passed on 2026-10-05; no broader security certification is claimed.
 

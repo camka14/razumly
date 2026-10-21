@@ -26,7 +26,7 @@ export default function DocumentationPage() {
       sections={sections}
     >
       <div className="classy-callout">
-        <p>Classification uses Jev through OpenRouter outside Atlassian. Read <Link href="/classy/data">Data &amp; deletion</Link> and only submit content you are authorized to process. No customer OpenRouter API key is required.</p>
+        <p>Classification uses Jev through OpenRouter outside Atlassian. Read <Link href="/classy/data">Data &amp; deletion</Link> and the <Link href="/classy/dpa/v1#customer-terms">Terms &amp; DPA input restrictions</Link>, and only submit content you are authorized to process. No customer OpenRouter API key is required.</p>
       </div>
 
       <section id="setup">
@@ -34,7 +34,7 @@ export default function DocumentationPage() {
         <ol>
           <li>Once Classy is installed on your Jira site, open <strong>Apps → Classy</strong>. A Jira administrator manages the installation and its license. No public purchase link is available on this site yet.</li>
           <li>Create a classifier or choose a recipe. Set its name, question/instructions, category labels and matching criteria, and confidence threshold. Category order does not establish precedence.</li>
-          <li>Save the classifier. Drafts and manual history are private to your Atlassian account in this installation.</li>
+          <li>Save the classifier. Drafts and manual history are owner-scoped in the workspace; Jira administrators can separately export other owners&apos; stored private records within this installation.</li>
           <li>Select Jira issues or use <strong>Test samples</strong> for supplied text. Run the batch and inspect the category, confidence, probability distribution and saved revision. Use a review workflow rather than treating confidence as proof.</li>
         </ol>
         <p>Jira selection rows are previews. Classy reads each issue&apos;s current summary and description when classification begins, using your Jira permissions. Comments and attachments are not read by the issue classifier. Supplied text is your input, even if it contains an issue key.</p>
@@ -106,13 +106,14 @@ export default function DocumentationPage() {
         <h2>7. Private manual history</h2>
         <p>History returns up to 50 recent manual results younger than seven rolling 24-hour UTC periods. It stores titles, a source preview of up to 240 characters, relevant issue metadata, category/probability snapshots, model, usage and timestamps, not a separate complete source-text field. Jira-backed history is filtered by your current issue access.</p>
         <p>Expired results disappear from History immediately; storage cleanup runs daily and can lag by roughly one day or longer after a failure. An empty History view is not proof of erasure.</p>
+        <p>History is not a complete data export. A Jira administrator can use <Link href="/classy/data#export">Classy data export</Link> to retrieve stored records for all owners in the installation, including private and physically retained records not visible in History.</p>
         <p>Use <strong>Clear history</strong> for the saved classifier, even when no rows are visible. It also removes retained results hidden by current Jira permissions, while keeping the definition and published revisions. If cleanup is interrupted, use <strong>Resume cleanup</strong>. See <Link href="/classy/data#deletion">the deletion procedures and their limits</Link>.</p>
       </section>
 
       <section id="access">
         <h2>8. License denial and reduced access</h2>
         <p>An active Classy license or trial is required for manual classification and both native actions. If license context is missing or inactive, the request is refused before being sent to OpenRouter. Ask your Jira administrator to activate or renew Classy.</p>
-        <p>Configuration, publication management, existing authorized history and erasure remain available without inference access. Read-only <strong>Check for result</strong> does not initiate inference. Losing a license does not itself erase stored data.</p>
+        <p>Configuration, publication management, existing authorized history, administrator data export and erasure are not blocked by Classy&apos;s inference license check. Read-only <strong>Check for result</strong> does not initiate inference. Losing a license does not itself erase stored data.</p>
         <p>A Jira administrator can also disable new inference in <strong>Jira settings → Apps → Classy administration</strong>. Already admitted work may still finish; disabling does not cancel processing or erase results. Re-enabling does not resume stopped runs.</p>
       </section>
 

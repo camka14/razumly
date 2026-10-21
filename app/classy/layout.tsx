@@ -31,6 +31,7 @@ export default function ClassyLayout({
             <Link href="/classy/docs">Documentation</Link>
             <Link href="/classy/data">Data &amp; deletion</Link>
             <Link href="/classy/support">Support</Link>
+            <Link href="/classy/dpa/v1">Terms &amp; DPA</Link>
           </nav>
         </div>
       </header>
