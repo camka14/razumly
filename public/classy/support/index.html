@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Support — Classy for Jira</title>
+  <meta name="description" content="Contact Classy support and share safe troubleshooting details without source content or credentials.">
+  <link rel="icon" href="/icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/classy/classy.css">
+</head>
+<body>
+  <div class="classy-site">
+    <a class="classy-skip-link" href="#classy-main">Skip to content</a>
+    <header class="classy-header">
+      <div class="classy-header-inner">
+        <a class="classy-brand" href="/classy"><img src="/classy.svg" width="48" height="48" alt=""><span>Classy <span class="classy-brand-detail">for Jira · by Razumly</span></span></a>
+        <nav class="classy-nav" aria-label="Classy">
+          <a href="/classy">Overview</a>
+          <a href="/classy/docs">Documentation</a>
+          <a href="/classy/data">Data &amp; deletion</a>
+          <a href="/classy/support" aria-current="page">Support</a>
+          <a href="/classy/dpa/v1">Terms &amp; DPA</a>
+        </nav>
+      </div>
+    </header>
+    <main id="classy-main" class="classy-main" tabindex="-1">
+      <article class="classy-document">
+        <h1>Classy support</h1>
+        <p class="classy-intro">For product questions, access problems, data-deletion requests or suspected security issues, email support@razumly.com.</p>
+        <nav class="classy-contents" aria-label="On this page">
+          <h2>On this page</h2>
+          <ul>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#troubleshooting">Troubleshooting</a></li>
+            <li><a href="#privacy">Privacy &amp; security</a></li>
+          </ul>
+        </nav>
+        <section id="contact">
+          <h2>Contact support</h2>
+          <p><a href="mailto:support@razumly.com?subject=Classy%20support">Email Classy support at support@razumly.com</a>. Put <strong>Classy</strong> in the subject and describe the question or observed behavior.</p>
+          <p>The <a href="/classy/dpa/v1#customer-terms">Classy Customer Agreement</a> supplements this support policy with response commitments: within <strong>24 hours</strong> for requests Atlassian identifies as critical, and within <strong>five business days</strong> for other customer or Atlassian support requests. These are response times, not resolution or uptime guarantees.</p>
+          <h3>Useful information to include</h3>
+          <ul>
+            <li>The affected Jira site and whether you used the workbench, <strong>Classify issue</strong> or <strong>Classify text</strong>.</li>
+            <li>The approximate UTC time, sanitized error code/message, and opaque <strong>Reference</strong> or result ID shown by Classy.</li>
+            <li>For Automation, the rule's action/audit outcome and the selected published revision reference, without source input or unrelated audit content.</li>
+            <li>For cleanup, the operation/sweep reference and reported state, without record payloads.</li>
+          </ul>
+          <p><strong>Do not email</strong> source text, classifier instructions containing private data, account passwords, API keys, authentication files, installation-wide data exports or raw provider/log exports. Redact screenshots and Jira audit excerpts. Start with metadata; avoid repeating classification just to obtain another support reference.</p>
+        </section>
+        <section id="troubleshooting">
+          <h2>Common troubleshooting paths</h2>
+          <dl>
+            <div>
+              <dt>License required</dt>
+              <dd>Ask your Jira administrator to activate or renew Classy. The refused inference attempt was not sent to OpenRouter; authorized configuration/history, administrator data export and deletion are not blocked by the inference license check.</dd>
+            </div>
+            <div>
+              <dt>Inference disabled</dt>
+              <dd>A Jira administrator has stopped new inference for this installation. Ask that administrator to inspect Classy administration. Already admitted work may still settle; re-enabling does not resume stopped runs.</dd>
+            </div>
+            <div>
+              <dt>Rate or capacity limit</dt>
+              <dd>Follow the displayed retry guidance and start new work deliberately when capacity is available. Another tab/account/rule shares the same installation limits. Classy does not queue or automatically retry refused work.</dd>
+            </div>
+            <div>
+              <dt>Service unavailable or provider credit limit</dt>
+              <dd>Contact Classy support with the reference and UTC time. Customers do not need to configure an OpenRouter key. The credentials indicator only reports that credentials are configured, not that access, credits or connectivity work.</dd>
+            </div>
+            <div>
+              <dt>Completion unknown</dt>
+              <dd>For a manual run, use <strong>Check for result</strong> and inspect History. A missing outcome does not prove the provider did no work. For native actions, inspect the rule audit and actual Jira effects before repeating anything; Jira may redeliver and another attempt may process again.</dd>
+            </div>
+            <div>
+              <dt>Source or permission changed</dt>
+              <dd>Check current issue access and summary/description/project. Classy rejects changed issue snapshots rather than returning a stale decision, even after a provider request.</dd>
+            </div>
+            <div>
+              <dt>Published revision unavailable</dt>
+              <dd>The owner may have unpublished/deleted it or been erased. Update or disable the rule, then deliberately select an available published revision. Classy does not silently rebind it.</dd>
+            </div>
+            <div>
+              <dt>History/deletion cleanup pending</dt>
+              <dd>Use the displayed resume control, then inspect the reported state. An empty History view or uncertain response is not proof of erasure. A Jira administrator can inspect retention and whole-owner erasure.</dd>
+            </div>
+            <div>
+              <dt>Data export interrupted</dt>
+              <dd>A failed or canceled export does not offer a partial download. Confirm the correct installation and start a new export during a quiet period. If it fails again, share only the displayed reference and UTC time with support, not the file or record payloads.</dd>
+            </div>
+          </dl>
+          <p>See the <a href="/classy/docs">customer guide</a> for configuration and review-safe branching, and <a href="/classy/data#deletion">Data &amp; deletion</a> for erasure procedures.</p>
+        </section>
+        <section id="privacy">
+          <h2>Privacy and suspected security issues</h2>
+          <p>Email <a href="mailto:support@razumly.com?subject=Classy%20privacy%20or%20security">support@razumly.com</a> and state that the request concerns Classy. Identify the affected Jira site and the relevant account or operation without including sensitive source content or credentials.</p>
+          <p>Your Jira administrator can erase an owner's app-addressable Classy records in that installation, even without an active session for the owner. This does not erase Jira sources, provider-controlled records, logs or platform backups. Review <a href="/classy/data#boundaries">the erasure boundaries</a>.</p>
+          <p>A current Jira administrator can also use <a href="/classy/data#export">Classy data export</a> for all owners' stored private records in that installation. Verify the recipient and requested scope before sharing; the export is not a reason to disclose unrelated owners' data.</p>
+          <p>Do not send exploit payloads or customer data in the first email. Describe the affected surface and observed impact so an appropriate handling method can be agreed. No separate public security certification is claimed.</p>
+        </section>
+      </article>
+    </main>
+    <footer class="classy-footer">
+      <p>Classy is a Jira app by Razumly. These pages cover Classy, not the Razumly sports app.</p>
+      <nav aria-label="Classy footer">
+        <a href="/">Razumly home</a>
+        <a href="/classy/privacy">Privacy notice</a>
+        <a href="mailto:support@razumly.com">support@razumly.com</a>
+      </nav>
+    </footer>
+  </div>
+</body>
+</html>

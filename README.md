@@ -1,53 +1,60 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Razumly
 
-## Getting Started
+The company website at [razumly.com](https://www.razumly.com/), built with plain HTML, CSS and JavaScript. Vite handles local development and static asset bundling; the deployed website has no React or Next.js runtime.
 
-First, run the development server:
+## Development
 
-```bash
+Use Node.js 22.12 or newer.
+
+```sh
+npm ci
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The development server listens at `http://127.0.0.1:5173`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```sh
+npm run build
+npm start
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+The production output is `dist/`; the preview server listens at `http://127.0.0.1:4173`.
 
-## Classy documentation
+## Website
 
-`/classy`, `/classy/docs`, `/classy/data` and `/classy/support` contain Classy-specific product documentation and support. `/classy/privacy` contains the Classy privacy notice, including the shared technical data-handling sections. `/classy/dpa/v1` contains Version 1.0 of the Classy Customer Agreement, including its Customer Terms and DPA Details. `/privacy-policy` and `/delete-data` continue to describe the separate sports app.
+- `index.html`: company homepage, products, founders, services and contact links.
+- `styles.css`: responsive layouts, light/dark themes and reduced-motion styles.
+- `script.js`: copyright year. Content and navigation also work without JavaScript.
+- `public/icon.svg` and `public/primary-logo.svg`: Razumly branding.
+- `public/images/`: responsive project screenshots and the social preview image.
+- `public/fonts/`: self-hosted Archivo and Manrope with their OFL licenses.
+- `design/`: the initial concept and desktop/mobile implementation images; these are not deployed.
 
-The owner approved publication of the agreement and matching Classy privacy, export-documentation and support updates on 20 October 2026. `app/classy/privacy/page.tsx` reuses `DataHandling` rather than maintaining a second retention/deletion policy. The documented administrator-assisted export includes other owners' stored private Classy records and requires current Jira-administrator authorization.
+BracketIQ is the featured product. DC Redesign and Brixivo link to their live websites; Rolemesh is marked work in progress with an inquiry link, and Classy is marked coming soon. Founder profiles link to their LinkedIn pages. Project screenshots were reused from the [founder's portfolio](https://github.com/camka14/portfolio).
 
-The public agreement incorporates the unchanged Bonterms Standard End User Agreement v1.0 and Bonterms DPA v2.0 Attachment Version, including Exhibits A/B and the service-specific Details. Its 30-day subprocessor-notice promise is unchanged. Publication is not customer acceptance or proof of supplier safeguards; the Details require actual customer information before affected processing. The historical `_legal/ReviewMaterial.tsx` remains non-routable and is not the public agreement.
+## Existing public documents
 
-This website release does not submit or release the Marketplace app or change its pricing. Verify the public document, navigation, desktop/mobile layout, support commitments and unchanged sports-policy routes after deployment.
+The static migration preserves the published document wording, metadata, navigation and meaningful fragment anchors:
 
-The sports privacy policy retains its already-published `10/5/2026` revision date instead of advancing it on every website build. Change that date only when that policy is actually revised; Classy publication leaves its wording and the sports deletion page unchanged.
+- `/classy`
+- `/classy/docs`
+- `/classy/data`
+- `/classy/privacy`
+- `/classy/support`
+- `/classy/dpa/v1`
+- `/privacy-policy`
+- `/delete-data`
 
-The 20 October publication also updates the existing `source-map-js` dependency from 1.2.1 to 1.2.2 for [GHSA-68fv-2mgg-jv7q](https://github.com/advisories/GHSA-68fv-2mgg-jv7q). The production dependency audit reports zero vulnerabilities after that patch; the production build, included lint/types, approved agreement text, desktop/mobile document layout and unchanged sports-policy checks pass.
+The HTML lives in `public/<route>/index.html`, with shared styles in `public/classy/classy.css`. Keep the shared data-handling sections consistent when making an approved policy revision. The sports privacy policy retains its published `10/5/2026` revision date; change it only when that policy is revised.
 
-The publication preparation updates Next within 15.x to `15.5.27` and overrides PostCSS with compatible `8.5.28`, resolving the observed production dependency advisories. Verify with `npm audit --package-lock-only --omit=dev`, `npm run build`, and a real browser check of Classy navigation, keyboard skip links, mobile layout and the unchanged sports-policy routes. The production audit and these build/browser checks passed on 2026-10-05; no broader security certification is claimed.
+The Classy agreement remains the previously published Version 1.0. This website release does not change contractual terms, constitute customer acceptance, submit or release the Marketplace app, or change its pricing. Historical review source under `app/` is not a website route or build input.
 
+The existing Android and Apple association files remain at `/.well-known/assetlinks.json` and `/.well-known/apple-app-site-association`.
 
-## Learn More
+## Deployment
 
-To learn more about Next.js, take a look at the following resources:
+The existing Vercel project deploys the GitHub `master` branch. `vercel.json` selects a framework-independent static build using `npm run build` and `dist/`, preserves clean document URLs, and serves both association files as JSON.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Only `dist/` is published. `vite.config.js` serves the document directory indexes during development and preview, returns 404 for unknown pages instead of an SPA fallback, and denies access to historical `app/` source during development.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Before publishing, run the production build and exercise the homepage, product links and document routes in a browser. After deployment, verify `https://www.razumly.com/`, the eight document routes, association-file content types and inaccessible private paths.

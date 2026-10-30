@@ -1,0 +1,416 @@
+/* Shared native document baseline, replacing the former global Tailwind preflight. */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  border: 0 solid;
+}
+
+html {
+  line-height: 1.5;
+  -webkit-text-size-adjust: 100%;
+  tab-size: 4;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-site-sans, Arial, Helvetica, sans-serif);
+}
+
+h1, h2, h3, p, ul, ol, dl, dd {
+  margin: 0;
+}
+
+ul, ol {
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+strong {
+  font-weight: bolder;
+}
+
+code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+hr {
+  height: 0;
+  border-top-width: 1px;
+  color: inherit;
+}
+
+.classy-site {
+  --classy-bg: #fafafa;
+  --classy-surface: #ffffff;
+  --classy-text: #171717;
+  --classy-muted: #525252;
+  --classy-border: #d4d4d4;
+  --classy-link: #1d4ed8;
+  min-height: 100vh;
+  background: var(--classy-bg);
+  color: var(--classy-text);
+  font-size: 1rem;
+  line-height: 1.7;
+  overflow-wrap: anywhere;
+}
+
+@media (prefers-color-scheme: dark) {
+  .classy-site {
+    --classy-bg: #0a0a0a;
+    --classy-surface: #171717;
+    --classy-text: #f5f5f5;
+    --classy-muted: #a3a3a3;
+    --classy-border: #404040;
+    --classy-link: #93c5fd;
+  }
+}
+
+.classy-site a {
+  color: var(--classy-link);
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+.classy-site a:hover {
+  text-decoration-thickness: 2px;
+}
+
+.classy-site :focus-visible {
+  outline: 3px solid var(--classy-link);
+  outline-offset: 4px;
+}
+
+.classy-site .classy-skip-link {
+  position: absolute;
+  top: 0.75rem;
+  left: 1rem;
+  z-index: 1;
+  padding: 0.75rem 1rem;
+  background: var(--classy-surface);
+  border: 1px solid var(--classy-border);
+  transform: translateY(-200%);
+}
+
+.classy-site .classy-skip-link:focus {
+  transform: translateY(0);
+}
+
+.classy-header {
+  border-bottom: 1px solid var(--classy-border);
+  background: var(--classy-surface);
+}
+
+.classy-header-inner {
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem 2rem;
+}
+
+.classy-site .classy-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--classy-text);
+  font-size: 1.25rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.classy-brand img {
+  flex: 0 0 auto;
+}
+
+.classy-brand-detail {
+  display: block;
+  color: var(--classy-muted);
+  font-size: 0.875rem;
+  font-weight: 400;
+}
+
+.classy-nav,
+.classy-footer nav,
+.classy-contents ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 1rem;
+}
+
+.classy-nav a,
+.classy-footer nav a,
+.classy-contents a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0.25rem 0;
+}
+
+.classy-main {
+  max-width: 52rem;
+  margin: 0 auto;
+  padding: 3rem 1.5rem 4rem;
+}
+
+.classy-document h1 {
+  margin: 0 0 1rem;
+  font-size: clamp(2rem, 5vw, 2.75rem);
+  font-weight: 650;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+}
+
+.classy-document h2 {
+  margin: 0 0 1rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.classy-document h3 {
+  margin: 1.5rem 0 0.75rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.classy-document p {
+  margin: 0 0 1rem;
+}
+
+.classy-intro {
+  color: var(--classy-muted);
+  font-size: 1.125rem;
+}
+
+.classy-document section {
+  margin-top: 2.5rem;
+  scroll-margin-top: 1.5rem;
+}
+
+.classy-document ul,
+.classy-document ol {
+  margin: 1rem 0;
+  padding-left: 1.5rem;
+}
+
+.classy-document ul {
+  list-style: disc;
+}
+
+.classy-document ol {
+  list-style: decimal;
+}
+
+.classy-document li + li {
+  margin-top: 0.75rem;
+}
+
+.classy-document .classy-contents {
+  margin-top: 1.75rem;
+  padding: 1rem 1.25rem;
+  border: 1px solid var(--classy-border);
+  border-radius: 0.5rem;
+  background: var(--classy-surface);
+}
+
+.classy-contents h2 {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+.classy-document .classy-contents ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.classy-document .classy-contents li + li {
+  margin-top: 0;
+}
+
+.classy-callout {
+  margin: 1.5rem 0;
+  padding: 1.25rem;
+  border: 1px solid var(--classy-border);
+  border-left: 4px solid var(--classy-link);
+  border-radius: 0.25rem;
+  background: var(--classy-surface);
+}
+
+.classy-callout p:last-child,
+.classy-footer p {
+  margin-bottom: 0;
+}
+
+.classy-document code {
+  font-family: var(--font-geist-mono, ui-monospace), monospace;
+  font-size: 0.9em;
+  overflow-wrap: anywhere;
+}
+
+.classy-document dl {
+  margin: 1rem 0;
+}
+
+.classy-document dl > div {
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--classy-border);
+}
+
+.classy-document dt {
+  font-weight: 600;
+}
+
+.classy-document dd {
+  margin: 0.25rem 0 0;
+}
+
+.classy-footer {
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: 1.5rem;
+  border-top: 1px solid var(--classy-border);
+  color: var(--classy-muted);
+  font-size: 0.875rem;
+}
+
+.classy-footer nav {
+  margin-top: 0.5rem;
+}
+
+@media (min-width: 640px) {
+  .classy-main {
+    padding-top: 4rem;
+  }
+
+  .classy-document dl > div {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+    gap: 1.5rem;
+  }
+
+  .classy-document dd {
+    margin-top: 0;
+  }
+}
+
+/* Native equivalents of the sports information pages' existing Tailwind utilities. */
+.sports-site {
+  --background: #ffffff;
+  --foreground: #171717;
+  min-height: 100vh;
+  background: var(--background);
+  color: var(--foreground);
+  overflow-wrap: anywhere;
+}
+
+.sports-site :focus-visible {
+  outline: 3px solid #2563eb;
+  outline-offset: 4px;
+}
+
+.sports-site .container { width: 100%; }
+.sports-site .mx-auto { margin-inline: auto; }
+.sports-site .px-4 { padding-inline: 1rem; }
+.sports-site .py-8 { padding-block: 2rem; }
+.sports-site .max-w-4xl { max-width: 56rem; }
+.sports-site .max-w-3xl { max-width: 48rem; }
+.sports-site .max-w-none { max-width: none; }
+.sports-site .text-4xl { font-size: 2.25rem; line-height: 2.5rem; }
+.sports-site .text-2xl { font-size: 1.5rem; line-height: 2rem; }
+.sports-site .text-lg { font-size: 1.125rem; line-height: 1.75rem; }
+.sports-site .text-sm { font-size: 0.875rem; line-height: 1.25rem; }
+.sports-site .font-bold { font-weight: 700; }
+.sports-site .font-semibold { font-weight: 600; }
+.sports-site .font-mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; }
+.sports-site .mb-8 { margin-bottom: 2rem; }
+.sports-site .mb-6 { margin-bottom: 1.5rem; }
+.sports-site .mb-4 { margin-bottom: 1rem; }
+.sports-site .mb-2 { margin-bottom: 0.5rem; }
+.sports-site .mt-1 { margin-top: 0.25rem; }
+.sports-site .ml-4 { margin-left: 1rem; }
+.sports-site .space-y-6 > :not(:last-child) { margin-bottom: 1.5rem; }
+.sports-site .space-y-4 > :not(:last-child) { margin-bottom: 1rem; }
+.sports-site .space-y-2 > :not(:last-child) { margin-bottom: 0.5rem; }
+.sports-site .list-disc { list-style-type: disc; }
+.sports-site .list-inside { list-style-position: inside; }
+.sports-site .p-4 { padding: 1rem; }
+.sports-site .p-6 { padding: 1.5rem; }
+.sports-site .pt-6 { padding-top: 1.5rem; }
+.sports-site .rounded-lg { border-radius: 0.5rem; }
+.sports-site .rounded-full { border-radius: 9999px; }
+.sports-site .border { border-width: 1px; }
+.sports-site .border-t { border-top-width: 1px; }
+.sports-site .border-blue-200 { border-color: #bfdbfe; }
+.sports-site .bg-gray-100 { background: #f3f4f6; }
+.sports-site .bg-blue-50 { background: #eff6ff; }
+.sports-site .bg-blue-500 { background: #3b82f6; }
+.sports-site .text-white { color: #ffffff; }
+.sports-site .text-gray-600 { color: #4b5563; }
+.sports-site .text-gray-700 { color: #374151; }
+.sports-site .text-blue-600 { color: #2563eb; }
+.sports-site .text-blue-700 { color: #1d4ed8; }
+.sports-site .text-blue-800 { color: #1e40af; }
+.sports-site .underline { text-decoration: underline; }
+.sports-site .hover\:no-underline:hover { text-decoration: none; }
+.sports-site .flex { display: flex; }
+.sports-site .items-start { align-items: flex-start; }
+.sports-site .items-center { align-items: center; }
+.sports-site .justify-center { justify-content: center; }
+.sports-site .space-x-3 { gap: 0.75rem; }
+.sports-site .w-6 { width: 1.5rem; flex-shrink: 0; }
+.sports-site .h-6 { height: 1.5rem; }
+
+@media (min-width: 640px) {
+  .sports-site .container { max-width: 640px; }
+}
+
+@media (min-width: 768px) {
+  .sports-site .container { max-width: 768px; }
+}
+
+@media (min-width: 1024px) {
+  .sports-site .container { max-width: 1024px; }
+}
+
+@media (min-width: 1280px) {
+  .sports-site .container { max-width: 1280px; }
+}
+
+@media (min-width: 1536px) {
+  .sports-site .container { max-width: 1536px; }
+}
+
+@media (prefers-color-scheme: dark) {
+  .sports-site {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+
+  .sports-site :focus-visible { outline-color: #60a5fa; }
+  .sports-site .text-gray-600 { color: #9ca3af; }
+  .sports-site .dark\:bg-gray-800 { background: #1f2937; }
+  .sports-site .dark\:bg-blue-900\/20 { background: rgb(30 58 138 / 20%); }
+  .sports-site .dark\:border-blue-800 { border-color: #1e40af; }
+  .sports-site .dark\:text-blue-200 { color: #bfdbfe; }
+  .sports-site .dark\:text-blue-300 { color: #93c5fd; }
+  .sports-site .dark\:text-gray-300 { color: #d1d5db; }
+  .sports-site .dark\:text-blue-400 { color: #60a5fa; }
+}

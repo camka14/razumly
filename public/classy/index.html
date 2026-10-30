@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Classy for Jira — Razumly</title>
+  <meta name="description" content="Customer documentation, data-handling information and support for Classy's Jira classification workbench and native Automation actions.">
+  <link rel="icon" href="/icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/classy/classy.css">
+</head>
+<body>
+  <div class="classy-site">
+    <a class="classy-skip-link" href="#classy-main">Skip to content</a>
+    <header class="classy-header">
+      <div class="classy-header-inner">
+        <a class="classy-brand" href="/classy"><img src="/classy.svg" width="48" height="48" alt=""><span>Classy <span class="classy-brand-detail">for Jira · by Razumly</span></span></a>
+        <nav class="classy-nav" aria-label="Classy">
+          <a href="/classy" aria-current="page">Overview</a>
+          <a href="/classy/docs">Documentation</a>
+          <a href="/classy/data">Data &amp; deletion</a>
+          <a href="/classy/support">Support</a>
+          <a href="/classy/dpa/v1">Terms &amp; DPA</a>
+        </nav>
+      </div>
+    </header>
+    <main id="classy-main" class="classy-main" tabindex="-1">
+      <article class="classy-document">
+        <h1>Classy for Jira</h1>
+        <p class="classy-intro">Create a custom classifier, review its decisions, and use an immutable published revision in native Jira Automation.</p>
+        <div class="classy-callout">
+          <p><strong>External AI processing.</strong> Classification sends source text and classifier/category content to OpenRouter and TypeSafe (Jev), outside Atlassian. Only use content you are authorized to process with these services. Read the <a href="/classy/data">data-handling and deletion explanation</a> before classifying.</p>
+        </div>
+        <section>
+          <h2>A workbench and two native actions</h2>
+          <p>Define a question, category matching criteria and a confidence threshold. Try authorized Jira issue text or supplied text in the Classy workbench, then inspect the selected category, confidence and probability distribution.</p>
+          <p>Publish a revision for site-wide use in <strong>Classy: Classify issue</strong> or <strong>Classy: Classify text</strong>. Classy returns a decision; your Jira Automation rule controls any field edits, labels, assignments or notifications.</p>
+          <p><strong>Unclear and below-threshold decisions are marked Review.</strong> Confidence is a model estimate, not a guarantee of correctness. Keep a separate review path and require <code>status = classified</code> before category-specific writes.</p>
+        </section>
+        <section>
+          <h2>Customer information</h2>
+          <ul>
+            <li><a href="/classy/docs">Documentation</a> — setup, publishing, both native actions, review-safe routing, history and reduced access.</li>
+            <li><a href="/classy/data">Data &amp; deletion</a> — what is sent and stored, retention, deletion procedures and limits.</li>
+            <li><a href="/classy/privacy">Privacy notice</a></li>
+            <li><a href="/classy/support">Support</a> — contact details and safe troubleshooting information.</li>
+          </ul>
+        </section>
+        <section>
+          <h2>Availability</h2>
+          <p>Classy's paid Marketplace listing and final billing settings have not been submitted. These pages provide product documentation, not an offer to purchase or a claim that a public paid release is available.</p>
+          <p>Customer legal terms are being prepared for owner approval. No unapproved agreement or DPA is offered on these pages.</p>
+        </section>
+      </article>
+    </main>
+    <footer class="classy-footer">
+      <p>Classy is a Jira app by Razumly. These pages cover Classy, not the Razumly sports app.</p>
+      <nav aria-label="Classy footer">
+        <a href="/">Razumly home</a>
+        <a href="/classy/privacy">Privacy notice</a>
+        <a href="mailto:support@razumly.com">support@razumly.com</a>
+      </nav>
+    </footer>
+  </div>
+</body>
+</html>

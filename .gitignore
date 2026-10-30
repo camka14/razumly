@@ -13,12 +13,11 @@
 # testing
 /coverage
 
-# next.js
-/.next/
-/out/
-
 # production
-/build
+/dist/
+
+# legacy local build cache
+/.next/
 
 # misc
 .DS_Store
@@ -36,6 +35,3 @@ yarn-error.log*
 # vercel
 .vercel
 
-# typescript
-*.tsbuildinfo
-next-env.d.ts
