@@ -32,6 +32,16 @@ The production output is `dist/`; the preview server listens at `http://127.0.0.
 
 BracketIQ is the featured product. DC Redesign and Brixivo link to their live websites; Rolemesh is marked work in progress with an inquiry link, and Classy is marked coming soon. Founder profiles link to their LinkedIn pages. Project screenshots were reused from the [founder's portfolio](https://github.com/camka14/portfolio).
 
+### Business automation and integrations
+
+The homepage presents workflow-first services alongside the portfolio: inquiry follow-up, field/office handoffs, draft quotes/orders, and reporting or exception queues. These are prospective examples, not delivered-project claims. Existing tools come before custom software; AI is optional.
+
+Workflow calls to action use the existing `support@razumly.com` mailbox with an editable email prompt and direct-email fallback. No form backend was added. DC Redesign describes verified website capabilities and labels the screenshot as a redesign preview, not evidence of the currently deployed design. No outcomes or client endorsements are claimed.
+
+Footer links explicitly distinguish Sports MVP privacy/deletion policies and Classy's privacy notice. A corporate-site privacy notice requires confirmed hosting/logging, analytics/cookies, inquiry/email processing, retention/deletion practices, responsible entity/contact, and applicable jurisdictions; none have been invented.
+
+Verification: production build passed; browser overflow checks passed at 320, 390, 768, and 1440 pixels. Desktop light/mobile dark layouts, section anchors, mailto contents, and policy destinations were checked. Policy routes returned HTTP 200 and fit the mobile viewport. No automated test or lint script is configured. Email delivery was not tested and no messages were sent.
+
 ## Existing public documents
 
 The static migration preserves the published document wording, metadata, navigation and meaningful fragment anchors:
