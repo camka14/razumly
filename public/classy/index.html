@@ -27,9 +27,29 @@
       <article class="classy-document">
         <h1>Classy for Jira</h1>
         <p class="classy-intro">Create a custom classifier, review its decisions, and use an immutable published revision in native Jira Automation.</p>
+        <p><a class="classy-primary-link" href="https://marketplace.atlassian.com/apps/760754966/classy">Try Classy on Marketplace</a></p>
         <div class="classy-callout">
           <p><strong>External AI processing.</strong> Classification sends source text and classifier/category content to OpenRouter and TypeSafe (Jev), outside Atlassian. Only use content you are authorized to process with these services. Read the <a href="/classy/data">data-handling and deletion explanation</a> before classifying.</p>
         </div>
+        <section id="demo" aria-labelledby="demo-title">
+          <h2 id="demo-title">Watch Classy in Jira</h2>
+          <p id="demo-description">A 2-minute 19-second demonstration using fictional support requests. Silent video with on-screen explanations.</p>
+          <video class="classy-demo" controls playsinline preload="none" width="1920" height="1080" poster="/classy/classy-demo-poster.jpg" aria-label="Classy classification and Jira Automation demo" aria-describedby="demo-description">
+            <source src="/classy/classy-demo.mp4" type="video/mp4">
+            Your browser does not support embedded video. Use the download link below.
+          </video>
+          <p><a href="/classy/classy-demo.mp4" download>Download the demo (MP4, 10 MB)</a></p>
+          <details class="classy-demo-description">
+            <summary>Text description of the demo</summary>
+            <ol>
+              <li>A Support request triage classifier is configured with Bug, Feature, Task and Question categories and a 75% confidence threshold.</li>
+              <li>Two fictional Jira requests are classified as Bug and Feature, and the classifier revision is published.</li>
+              <li>The saved decisions show their confidence values, category probabilities and classifier definition. The published revision is selected in a native Jira Automation rule.</li>
+              <li>The rule checks that the decision status is classified and the category is Bug before adding an engineering label and a comment containing the decision output.</li>
+              <li>The rule runs on a fictional bug report. The issue receives the engineering label and decision comment, and the Automation audit shows Success.</li>
+            </ol>
+          </details>
+        </section>
         <section>
           <h2>A workbench and two native actions</h2>
           <p>Define a question, category matching criteria and a confidence threshold. Try authorized Jira issue text or supplied text in the Classy workbench, then inspect the selected category, confidence and probability distribution.</p>
@@ -47,8 +67,8 @@
         </section>
         <section>
           <h2>Availability</h2>
-          <p>Classy's paid Marketplace listing and final billing settings have not been submitted. These pages provide product documentation, not an offer to purchase or a claim that a public paid release is available.</p>
-          <p>Customer legal terms are being prepared for owner approval. No unapproved agreement or DPA is offered on these pages.</p>
+          <p>Classy is available for Jira Cloud on the <a href="https://marketplace.atlassian.com/apps/760754966/classy">Atlassian Marketplace</a>. Start a free trial or view current pricing on the listing. Subscriptions are billed through Atlassian.</p>
+          <p>Read the <a href="/classy/dpa/v1">Classy Customer Agreement and DPA</a> and the <a href="/classy/privacy">privacy notice</a> before installing.</p>
         </section>
       </article>
     </main>
